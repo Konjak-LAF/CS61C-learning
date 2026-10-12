@@ -2,3 +2,8 @@
 2.
 3.
 4.
+
+grep -r keyword /path/to/directory — recursively searches a file hierarchy for a keyword.
+ps — displays information about processes running on your machine (e.g., ps aux or ps -ef).
+kill PID — terminates a process by its process ID.
+diff file1 file2 — shows the differences between two files.
