@@ -21,6 +21,7 @@
 set indir = "testInputs"
 set outdir = "studentOutputs"
 set life = "./gameOfLife"
+set ansdir = "testOutputs/GliderGuns"
 
 if ($#argv != 3) then
     echo "Usage: $0 <rootname> <rule> <frames>"
@@ -65,6 +66,7 @@ while ($n < $max)
 	else
 		echo -n "$report "
 	    $life $outdir/$1/$1_$2_$n.ppm $2 >! $outdir/$1/$1_$2_$np.ppm
+        diff $outdir/$1/$1_$2_$n.ppm $ansdir/$1_$2_$n.ppm
 	endif
     @ n = $n + 1
 end

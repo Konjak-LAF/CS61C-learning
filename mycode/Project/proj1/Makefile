@@ -18,6 +18,7 @@ imageloader: imageloader.o imageloadertester.o
 	./imageloadertester testInputs/JohnConway.ppm > studentOutputs/JohnConway.ppm
 	diff testInputs/JohnConway.ppm studentOutputs/JohnConway.ppm
 	echo "Diff check: The above lines were different than expected. If no lines show up, then this passed"
+	./imageloadertester testInputs/GliderGuns.ppm > studentOutputs/test.ppm
 
 imagememcheck: imageloader
 	echo "Running memory check on imageloadertest"
@@ -36,6 +37,11 @@ gameoflife: imageloader.o gameoflife.o
 	$(CC) $(LDFLAGS) -o gameOfLife gameoflife.o imageloader.o
 	echo "Successfully compiled"
 	echo "Run ./frames.csh for various tests"
+
+gametest: imageloader.o gameoflife.o
+	$(CC) $(LDFLAGS) -o gameOfLife gameoflife.o imageloader.o
+	echo "Successfully compiled"
+	./gameOfLife testInputs/GliderGuns.ppm 0x1808 > studentOutputs/test.ppm
 
 gameoflifememcheck: gameoflife
 	valgrind $(VGFLAGS) ./gameOfLife testInputs/JohnConway.ppm 0x1808 > studentOutputs/temp.ppm
