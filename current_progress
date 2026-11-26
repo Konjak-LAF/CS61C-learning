@@ -1,8 +1,18 @@
 To Do
 
-lecture: lec7
-lab: lab03
-proj: project2
+lecture: lec13
+lab: lab05
+proj: project3
 
-RISC-V 汇编（第 4-7 周）
-目标：掌握 RISC-V 指令集、汇编编程、调用约定，完成 Lab 3-5 和 Project 2。
+🔧 阶段三：工具链与数字逻辑基础（Week 5 - Week 6）
+
+连接软件编译过程和底层数字电路。
+
+- Lecture:
+  - Lec 13 (9/25): Compilation, Assembly, Linking, Loading (工具链)
+  - Lec 14 (9/28): Intro to Synchronous Digital Systems (SDS)
+  - Lec 15 (9/30): State Machines
+  - Lec 16 (10/2): Combinational Logic
+- Lab: Lab 5 (Logisim)
+- Project/Homework:
+  - Homework 6 (Digital Logic)
